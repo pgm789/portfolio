@@ -111,6 +111,21 @@
       color: var(--muted);
     }
 
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 1.4rem;
+      width: 44px;
+      height: 40px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
     .nav-links a:hover {
       color: var(--text);
     }
@@ -461,6 +476,7 @@
     }
 
     @media (max-width: 850px) {
+
       .hero,
       .contact-box,
       .skills-wrap {
@@ -482,8 +498,47 @@
         letter-spacing: -2px;
       }
 
+      /* Hide desktop menu */
       .nav-links {
         display: none;
+      }
+
+      /* Show hamburger button */
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-inner {
+        position: relative;
+      }
+
+      /* Mobile dropdown */
+      .mobile-menu {
+        position: absolute;
+        top: 62px;
+        right: 0;
+        width: 230px;
+        padding: 12px;
+        background: #0b1727;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: var(--shadow);
+      }
+
+      .mobile-menu.active {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mobile-menu a {
+        padding: 11px 12px;
+        color: var(--muted);
+        border-radius: 8px;
+      }
+
+      .mobile-menu a:hover {
+        color: var(--text);
+        background: rgba(255,255,255,.06);
       }
 
       .section-head {
@@ -505,17 +560,42 @@
 
 <nav>
   <div class="container nav-inner">
-    <a class="brand" href="#top">GM<span>.</span></a>
 
+    <a class="brand" href="#top">
+      GM<span>.</span>
+    </a>
+
+    <!-- Desktop Menu -->
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#internship">Internship</a>
+      <a href="#experience">Experience</a>
       <a href="#fyp">Final Year Project</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
+
+    <!-- Mobile Button -->
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+    <!-- Mobile Dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#fyp">Final Year Project</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+
   </div>
 </nav>
 
@@ -1462,6 +1542,31 @@
 
 </footer>
 
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuToggle.addEventListener("click", function () {
+    mobileMenu.classList.toggle("active");
+
+    if (mobileMenu.classList.contains("active")) {
+      menuToggle.innerHTML = "✕";
+      menuToggle.setAttribute("aria-label", "Close menu");
+    } else {
+      menuToggle.innerHTML = "☰";
+      menuToggle.setAttribute("aria-label", "Open menu");
+    }
+  });
+
+  // Close menu after clicking a section
+  document.querySelectorAll(".mobile-menu a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      mobileMenu.classList.remove("active");
+      menuToggle.innerHTML = "☰";
+      menuToggle.setAttribute("aria-label", "Open menu");
+    });
+  });
+</script>
 
 </body>
 </html>

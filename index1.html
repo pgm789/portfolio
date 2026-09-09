@@ -1,0 +1,3198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Phoong Guik Ming | Computer Science Fresh Graduate</title>
+
+  <meta
+    name="description"
+    content="Portfolio of Phoong Guik Ming, Computer Science fresh graduate with experience in backend development, IoT, data analytics, cloud computing and computer vision."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --bg: #07111f;
+      --card: rgba(255,255,255,0.06);
+      --card-strong: rgba(255,255,255,0.09);
+      --text: #eef6ff;
+      --muted: #9fb0c5;
+      --accent: #5eead4;
+      --accent2: #60a5fa;
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 18px 60px rgba(0,0,0,.28);
+      --max: 1150px;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+
+      font-family:
+        'Inter',
+        system-ui,
+        sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 85% 10%,
+          rgba(96,165,250,.18),
+          transparent 28%
+        ),
+
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(94,234,212,.12),
+          transparent 30%
+        ),
+
+        var(--bg);
+
+      color: var(--text);
+
+      line-height: 1.65;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+
+    .container {
+      width: min(
+        var(--max),
+        calc(100% - 40px)
+      );
+
+      margin: auto;
+    }
+
+
+
+    /* ==============================
+       NAVIGATION
+    ============================== */
+
+    nav {
+      position: sticky;
+      top: 0;
+
+      z-index: 9999;
+
+      backdrop-filter: blur(16px);
+
+      background:
+        rgba(7,17,31,.90);
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .nav-inner {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      min-height: 70px;
+
+      gap: 20px;
+
+      position: relative;
+    }
+
+
+    .brand {
+      font-weight: 800;
+
+      letter-spacing: .3px;
+
+      font-size: 1.1rem;
+    }
+
+
+    .brand span {
+      color: var(--accent);
+    }
+
+
+    .nav-links {
+      display: flex;
+
+      gap: 22px;
+
+      flex-wrap: wrap;
+
+      font-size: .94rem;
+
+      color: var(--muted);
+    }
+
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+
+
+    /* HAMBURGER */
+
+    .menu-toggle {
+      display: none;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background: transparent;
+
+      border:
+        1px solid var(--border);
+
+      color: var(--text);
+
+      font-size: 1.45rem;
+
+      width: 46px;
+
+      height: 42px;
+
+      border-radius: 10px;
+
+      cursor: pointer;
+
+      padding: 0;
+
+      position: relative;
+
+      z-index: 10002;
+    }
+
+
+
+    /* MOBILE MENU */
+
+    .mobile-menu {
+      display: none;
+
+      position: absolute;
+
+      top: 62px;
+
+      right: 0;
+
+      width: 240px;
+
+      padding: 12px;
+
+      background: #0b1727;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 14px;
+
+      box-shadow:
+        0 18px 60px
+        rgba(0,0,0,.55);
+
+      z-index: 10001;
+    }
+
+
+    .mobile-menu.active {
+      display: flex;
+
+      flex-direction: column;
+    }
+
+
+    .mobile-menu a {
+      display: block;
+
+      padding: 12px 14px;
+
+      color: var(--muted);
+
+      border-radius: 8px;
+    }
+
+
+    .mobile-menu a:hover {
+      color: var(--text);
+
+      background:
+        rgba(255,255,255,.06);
+    }
+
+
+
+    /* ==============================
+       HERO
+    ============================== */
+
+    .hero {
+      min-height:
+        calc(100vh - 70px);
+
+      display: grid;
+
+      grid-template-columns:
+        1.25fr .75fr;
+
+      gap: 60px;
+
+      align-items: center;
+
+      padding: 80px 0;
+    }
+
+
+    .eyebrow {
+      display: inline-flex;
+
+      padding:
+        7px 12px;
+
+      border:
+        1px solid
+        rgba(94,234,212,.28);
+
+      border-radius:
+        999px;
+
+      color:
+        var(--accent);
+
+      font-size:
+        .82rem;
+
+      background:
+        rgba(94,234,212,.06);
+
+      margin-bottom:
+        20px;
+    }
+
+
+    h1 {
+      font-size:
+        clamp(
+          2.7rem,
+          7vw,
+          5.6rem
+        );
+
+      line-height:
+        .98;
+
+      margin:
+        0 0 22px;
+
+      letter-spacing:
+        -3px;
+    }
+
+
+    .hero h1 span {
+      background:
+        linear-gradient(
+          90deg,
+          var(--accent),
+          var(--accent2)
+        );
+
+      -webkit-background-clip:
+        text;
+
+      color:
+        transparent;
+    }
+
+
+    .hero p {
+      color:
+        var(--muted);
+
+      font-size:
+        1.08rem;
+
+      max-width:
+        760px;
+    }
+
+
+    .cta {
+      display: flex;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+
+      margin-top:
+        28px;
+    }
+
+
+    .btn {
+      display:
+        inline-block;
+
+      padding:
+        12px 18px;
+
+      border-radius:
+        12px;
+
+      border:
+        1px solid
+        var(--border);
+
+      font-weight:
+        700;
+
+      transition:
+        .2s ease;
+
+      cursor:
+        pointer;
+    }
+
+
+    .btn.primary {
+      background:
+        linear-gradient(
+          90deg,
+          var(--accent),
+          var(--accent2)
+        );
+
+      color:
+        #04101b;
+
+      border:
+        none;
+    }
+
+
+    .btn:hover {
+      transform:
+        translateY(-2px);
+    }
+
+
+
+    .hero-card {
+      border:
+        1px solid
+        var(--border);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.08),
+          rgba(255,255,255,.035)
+        );
+
+      border-radius:
+        28px;
+
+      padding:
+        30px;
+
+      box-shadow:
+        var(--shadow);
+    }
+
+
+    .avatar {
+      width:
+        110px;
+
+      height:
+        110px;
+
+      border-radius:
+        24px;
+
+      display:
+        grid;
+
+      place-items:
+        center;
+
+      font-size:
+        2rem;
+
+      font-weight:
+        800;
+
+      color:
+        #06111f;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--accent),
+          var(--accent2)
+        );
+
+      margin-bottom:
+        24px;
+    }
+
+
+    .mini-grid {
+      display:
+        grid;
+
+      gap:
+        12px;
+
+      margin-top:
+        20px;
+    }
+
+
+    .mini-item {
+      padding:
+        14px 16px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        14px;
+
+      background:
+        rgba(255,255,255,.03);
+    }
+
+
+    .mini-item strong {
+      display:
+        block;
+
+      font-size:
+        .88rem;
+
+      color:
+        var(--muted);
+
+      font-weight:
+        600;
+    }
+
+
+
+    /* ==============================
+       GENERAL SECTION
+    ============================== */
+
+    section {
+      padding:
+        85px 0;
+
+      scroll-margin-top:
+        80px;
+    }
+
+
+    .section-head {
+      display:
+        flex;
+
+      align-items:
+        end;
+
+      justify-content:
+        space-between;
+
+      gap:
+        30px;
+
+      margin-bottom:
+        34px;
+    }
+
+
+    .section-head h2 {
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          3.1rem
+        );
+
+      margin:
+        0;
+
+      letter-spacing:
+        -1.6px;
+    }
+
+
+    .section-head p {
+      margin:
+        0;
+
+      color:
+        var(--muted);
+
+      max-width:
+        590px;
+    }
+
+
+
+    .grid-2 {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0,1fr)
+        );
+
+      gap:
+        20px;
+    }
+
+
+    .grid-3 {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0,1fr)
+        );
+
+      gap:
+        20px;
+    }
+
+
+
+    .card {
+      border:
+        1px solid
+        var(--border);
+
+      background:
+        var(--card);
+
+      border-radius:
+        20px;
+
+      padding:
+        24px;
+
+      transition:
+        .2s ease;
+    }
+
+
+    .card:hover {
+      transform:
+        translateY(-4px);
+
+      background:
+        var(--card-strong);
+    }
+
+
+    .card h3 {
+      margin:
+        0 0 8px;
+    }
+
+
+    .muted {
+      color:
+        var(--muted);
+    }
+
+
+    .small {
+      font-size:
+        .9rem;
+    }
+
+
+
+    /* ==============================
+       TAGS
+    ============================== */
+
+    .tags {
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        8px;
+
+      margin-top:
+        16px;
+    }
+
+
+    .tag {
+      font-size:
+        .8rem;
+
+      color:
+        #cde9ff;
+
+      border:
+        1px solid
+        rgba(96,165,250,.24);
+
+      background:
+        rgba(96,165,250,.08);
+
+      padding:
+        6px 9px;
+
+      border-radius:
+        999px;
+    }
+
+
+
+    /* ==============================
+       INTERNSHIP TIMELINE
+    ============================== */
+
+    .timeline {
+      position:
+        relative;
+    }
+
+
+    .timeline::before {
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        10px;
+
+      top:
+        8px;
+
+      bottom:
+        8px;
+
+      width:
+        2px;
+
+      background:
+        linear-gradient(
+          var(--accent),
+          var(--accent2)
+        );
+
+      opacity:
+        .35;
+    }
+
+
+    .timeline-item {
+      position:
+        relative;
+
+      padding-left:
+        42px;
+
+      margin-bottom:
+        26px;
+    }
+
+
+    .timeline-item::before {
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        2px;
+
+      top:
+        9px;
+
+      width:
+        18px;
+
+      height:
+        18px;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--bg);
+
+      border:
+        4px solid
+        var(--accent);
+    }
+
+
+    .timeline-item h3 {
+      margin-bottom:
+        2px;
+    }
+
+
+
+    /* ==============================
+       FYP
+    ============================== */
+
+    .fyp-card {
+      padding:
+        32px;
+    }
+
+
+    .fyp-header {
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        flex-start;
+
+      gap:
+        20px;
+
+      flex-wrap:
+        wrap;
+    }
+
+
+    .fyp-title {
+      font-size:
+        1.8rem;
+
+      margin:
+        0 0 10px;
+    }
+
+
+    .fyp-description {
+      max-width:
+        800px;
+    }
+
+
+    .fyp-features {
+      margin-top:
+        24px;
+    }
+
+
+    .fyp-features .mini-item {
+      min-height:
+        150px;
+    }
+
+
+    .fyp-features strong {
+      color:
+        var(--text);
+
+      font-size:
+        1rem;
+
+      margin-bottom:
+        8px;
+    }
+
+
+
+    /* ==============================
+       PROJECTS
+    ============================== */
+
+    .project-card {
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
+      min-height:
+        100%;
+
+      overflow:
+        hidden;
+    }
+
+
+    .project-card .project-top {
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        start;
+
+      gap:
+        14px;
+    }
+
+
+    .project-card .link,
+    .link {
+      color:
+        var(--accent);
+
+      font-size:
+        .88rem;
+
+      font-weight:
+        700;
+    }
+
+
+    .project-card p {
+      color:
+        var(--muted);
+    }
+
+
+
+    .project-image {
+      width:
+        100%;
+
+      height:
+        230px;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center;
+
+      border-radius:
+        14px;
+
+      margin-bottom:
+        20px;
+
+      border:
+        1px solid
+        var(--border);
+
+      background:
+        rgba(255,255,255,.03);
+
+      transition:
+        transform .25s ease;
+    }
+
+
+    .project-image:hover {
+      transform:
+        scale(1.02);
+    }
+
+
+
+    /* UniteFund vertical image */
+
+    .fund-image {
+      width:
+        30%;
+
+      height:
+        230px;
+
+      object-fit:
+        fill;
+
+      display:
+        block;
+
+      margin:
+        0 auto 20px auto;
+
+      border-radius:
+        14px;
+
+      border:
+        1px solid
+        var(--border);
+    }
+
+
+
+    /* ==============================
+       SKILLS
+    ============================== */
+
+    .skills-wrap {
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:
+        20px;
+    }
+
+
+    .skill-group h3 {
+      margin-top:
+        0;
+    }
+
+
+
+    /* ==============================
+       CONTACT
+    ============================== */
+
+    .contact-box {
+      display:
+        grid;
+
+      grid-template-columns:
+        1.2fr .8fr;
+
+      gap:
+        28px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius:
+        26px;
+
+      padding:
+        32px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(94,234,212,.09),
+          rgba(96,165,250,.08)
+        );
+    }
+
+
+
+    footer {
+      padding:
+        30px 0 50px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        .9rem;
+
+      text-align:
+        center;
+    }
+
+
+
+    /* ======================================
+       TABLET + MOBILE
+    ====================================== */
+
+    @media (max-width: 1000px) {
+
+      /*
+        IMPORTANT:
+        Hide desktop navigation
+      */
+
+      .nav-links {
+        display:
+          none !important;
+      }
+
+
+      /*
+        Show hamburger button
+      */
+
+      .menu-toggle {
+        display:
+          flex !important;
+      }
+
+
+      /*
+        Dropdown menu
+      */
+
+      .mobile-menu {
+        display:
+          none;
+      }
+
+
+      .mobile-menu.active {
+        display:
+          flex !important;
+
+        flex-direction:
+          column;
+      }
+
+
+      .hero,
+      .contact-box,
+      .skills-wrap {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .grid-3,
+      .grid-2 {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .hero {
+        min-height:
+          auto;
+
+        gap:
+          30px;
+
+        padding-top:
+          55px;
+      }
+
+
+      h1 {
+        letter-spacing:
+          -2px;
+      }
+
+
+      .section-head {
+        display:
+          block;
+      }
+
+
+      .section-head p {
+        margin-top:
+          12px;
+      }
+
+
+      .project-image {
+        height:
+          200px;
+      }
+
+    }
+
+
+
+    /* ==============================
+       PHONE
+    ============================== */
+
+    @media (max-width: 600px) {
+
+      .container {
+        width:
+          min(
+            100% - 28px,
+            var(--max)
+          );
+      }
+
+
+      nav {
+        background:
+          rgba(7,17,31,.96);
+      }
+
+
+      .nav-inner {
+        min-height:
+          64px;
+      }
+
+
+      .mobile-menu {
+        position:
+          absolute;
+
+        top:
+          58px;
+
+        right:
+          0;
+
+        width:
+          min(
+            260px,
+            calc(100vw - 28px)
+          );
+      }
+
+
+      .hero {
+        padding:
+          45px 0 60px;
+      }
+
+
+      h1 {
+        font-size:
+          clamp(
+            2.6rem,
+            15vw,
+            4rem
+          );
+      }
+
+
+      .hero-card {
+        padding:
+          22px;
+      }
+
+
+      section {
+        padding:
+          65px 0;
+      }
+
+
+      .fyp-card {
+        padding:
+          22px;
+      }
+
+
+      .contact-box {
+        padding:
+          22px;
+      }
+
+
+      .cta {
+        gap:
+          10px;
+      }
+
+
+      .btn {
+        padding:
+          10px 14px;
+
+        font-size:
+          .88rem;
+      }
+
+
+      /*
+        Keep UniteFund image thin
+        on phone
+      */
+
+      .fund-image {
+        width:
+          45%;
+
+        height:
+          220px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- ==============================
+     NAVIGATION
+============================== -->
+
+<nav>
+
+  <div class="container nav-inner">
+
+
+    <a
+      class="brand"
+      href="#top"
+    >
+      GM<span>.</span>
+    </a>
+
+
+
+    <!-- DESKTOP MENU -->
+
+    <div class="nav-links">
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#internship">
+        Internship
+      </a>
+
+      <a href="#fyp">
+        Final Year Project
+      </a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#skills">
+        Skills
+      </a>
+
+      <a href="#education">
+        Education
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+
+
+    <!-- MOBILE HAMBURGER -->
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+
+
+    <!-- MOBILE DROPDOWN -->
+
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+    >
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#internship">
+        Internship
+      </a>
+
+      <a href="#fyp">
+        Final Year Project
+      </a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#skills">
+        Skills
+      </a>
+
+      <a href="#education">
+        Education
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<main id="top">
+
+
+
+<!-- ==============================
+     HERO
+============================== -->
+
+<div class="container hero">
+
+
+  <div>
+
+
+    <div class="eyebrow">
+
+      Available to Start Working Immediately · Malaysia
+
+    </div>
+
+
+
+    <h1>
+
+      Phoong
+
+      <br>
+
+      <span>
+        Guik Ming
+      </span>
+
+    </h1>
+
+
+
+    <p>
+
+      I am a recent Computer Science graduate with
+      hands-on experience in backend development,
+      IoT, data analytics, and cloud computing.
+
+      I have experience building web applications,
+      REST APIs, and automated data pipelines using
+      Python, Flask, and AWS.
+
+      I am passionate about applying my backend
+      and data analytics skills to build, test,
+      and optimize scalable and practical
+      technology solutions.
+
+    </p>
+
+
+
+    <div class="cta">
+
+
+      <a
+        class="btn primary"
+        href="#projects"
+      >
+        View Projects
+      </a>
+
+
+
+      <a
+        class="btn"
+        href="files/GuikMing_resume.pdf"
+        download
+      >
+        Download Resume ↓
+      </a>
+
+
+
+      <a
+        class="btn"
+        href="mailto:guikming789@gmail.com"
+      >
+        Email Me
+      </a>
+
+
+
+      <a
+        class="btn"
+        href="https://github.com/pgm789"
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub ↗
+      </a>
+
+
+    </div>
+
+  </div>
+
+
+
+  <aside class="hero-card">
+
+
+    <div class="avatar">
+      GM
+    </div>
+
+
+    <h3
+      style="
+        font-size:1.5rem;
+        margin:0
+      "
+    >
+
+      Computer Science
+
+      <br>
+
+      Fresh Graduate
+
+    </h3>
+
+
+
+    <p class="muted">
+
+      Backend · IoT · Data Analytics ·
+      Cloud · Computer Vision
+
+    </p>
+
+
+
+    <div class="mini-grid">
+
+
+      <div class="mini-item">
+
+        <strong>
+          Email
+        </strong>
+
+        guikming789@gmail.com
+
+      </div>
+
+
+
+      <div class="mini-item">
+
+        <strong>
+          Phone / WhatsApp
+        </strong>
+
+        016-4131547
+
+      </div>
+
+
+
+      <div class="mini-item">
+
+        <strong>
+          Languages
+        </strong>
+
+        English · Malay · Mandarin · Hokkien
+
+      </div>
+
+
+    </div>
+
+
+  </aside>
+
+
+</div>
+
+
+
+<!-- ==============================
+     ABOUT
+============================== -->
+
+<section id="about">
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <h2>
+        About Me
+      </h2>
+
+    </div>
+
+
+
+    <div class="grid-3">
+
+
+      <div class="card">
+
+        <h3>
+          Backend Development
+        </h3>
+
+        <p class="muted">
+
+          Building web applications,
+          REST APIs, data flows and
+          database-backed systems with
+          Python, Flask, PHP and SQL.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          IoT & Computer Vision
+        </h3>
+
+        <p class="muted">
+
+          Hands-on work with Raspberry Pi,
+          sensors, OpenCV and Dlib for
+          automation, monitoring,
+          recognition and real-time data capture.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="card">
+
+        <h3>
+          Cloud & Analytics
+        </h3>
+
+        <p class="muted">
+
+          Experience with AWS pipelines,
+          forecasting models,
+          data scraping,
+          automation and predictive analytics.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ==============================
+     INTERNSHIP
+============================== -->
+
+<section id="internship">
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <h2>
+        Internship
+      </h2>
+
+    </div>
+
+
+
+    <div class="timeline">
+
+
+      <div class="timeline-item">
+
+
+        <h3>
+          Sophic Automation Sdn Bhd
+        </h3>
+
+
+        <div class="muted small">
+
+          Software Innovation Department
+          · Oct 2024 – Jan 2025
+
+        </div>
+
+
+
+        <div
+          class="card"
+          style="margin-top:14px"
+        >
+
+
+          <p>
+
+            <strong>
+              Automated Data Scraping:
+            </strong>
+
+            Built web scrapers to automate
+            data collection and replace
+            manual gathering workflows.
+
+          </p>
+
+
+
+          <p>
+
+            <strong>
+              Full-Stack API Development:
+            </strong>
+
+            Developed web applications
+            and Flask REST APIs to connect
+            components across internal systems.
+
+          </p>
+
+
+
+          <p>
+
+            <strong>
+              Forecasting:
+            </strong>
+
+            Applied ARIMA and VAR
+            time-series models to
+            pumphouse water-level data
+            and toll plaza traffic datasets.
+
+          </p>
+
+
+
+          <p>
+
+            <strong>
+              Computer Vision:
+            </strong>
+
+            Implemented object detection
+            and tracking models for
+            visual monitoring and
+            automated data collection.
+
+          </p>
+
+
+
+          <div class="cta">
+
+
+            <a
+              class="btn primary"
+              href="files/internship.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+
+              View Internship Presentation ↗
+
+            </a>
+
+
+
+            <a
+              class="btn"
+              href="files/internship.pdf"
+              download
+            >
+
+              Download Presentation
+
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==============================
+     FINAL YEAR PROJECT
+============================== -->
+
+<section id="fyp">
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <h2>
+        Final Year Project
+      </h2>
+
+    </div>
+
+
+
+    <div class="card fyp-card">
+
+
+      <div class="fyp-header">
+
+
+        <div>
+
+
+          <div
+            class="eyebrow"
+            style="margin-bottom:14px"
+          >
+
+            Feb 2025 – Sep 2025
+
+          </div>
+
+
+
+          <h3 class="fyp-title">
+
+            Real-Time Attendance System
+
+          </h3>
+
+
+
+          <p class="muted fyp-description">
+
+            Built an end-to-end smart attendance
+            platform using Raspberry Pi 5,
+            Linux-based systems,
+            PIR and ultrasonic sensors,
+            computer vision,
+            Flask REST APIs,
+            MySQL and Telegram automation.
+
+          </p>
+
+
+        </div>
+
+
+
+        <span class="link">
+
+          Capstone Project
+
+        </span>
+
+
+      </div>
+
+
+
+      <div class="grid-2 fyp-features">
+
+
+        <div class="mini-item">
+
+
+          <strong>
+            Multi-Sensor Trigger System
+          </strong>
+
+
+          Designed an energy-efficient
+          hardware pipeline using
+          a PIR motion sensor and
+          ultrasonic distance sensor.
+
+          The system automatically
+          activates the webcam when
+          a user is detected within 50 cm.
+
+
+        </div>
+
+
+
+        <div class="mini-item">
+
+
+          <strong>
+            Computer Vision & Liveness Detection
+          </strong>
+
+
+          Developed facial recognition
+          using OpenCV and Dlib
+          with face tracking,
+          color-coded bounding boxes
+          and eye-blink detection
+          to reduce photo spoofing.
+
+
+        </div>
+
+
+
+        <div class="mini-item">
+
+
+          <strong>
+            IoT Data & API Integration
+          </strong>
+
+
+          Built a Python backend
+          that updates student
+          attendance records in real time
+          through a Flask REST API
+          and stores attendance
+          information in MySQL.
+
+
+        </div>
+
+
+
+        <div class="mini-item">
+
+
+          <strong>
+            Web Dashboard & Automated Alerts
+          </strong>
+
+
+          Created an HTML dashboard
+          to display live attendance
+          records and configured
+          Telegram alerts when
+          student attendance falls
+          below 80%.
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <div
+        class="tags"
+        style="margin-top:24px"
+      >
+
+
+        <span class="tag">
+          Raspberry Pi 5
+        </span>
+
+        <span class="tag">
+          Python
+        </span>
+
+        <span class="tag">
+          Flask
+        </span>
+
+        <span class="tag">
+          OpenCV
+        </span>
+
+        <span class="tag">
+          Dlib
+        </span>
+
+        <span class="tag">
+          MySQL
+        </span>
+
+        <span class="tag">
+          HTML
+        </span>
+
+        <span class="tag">
+          Debian Linux
+        </span>
+
+        <span class="tag">
+          PIR Sensor
+        </span>
+
+        <span class="tag">
+          Ultrasonic Sensor
+        </span>
+
+        <span class="tag">
+          Telegram Bot
+        </span>
+
+
+      </div>
+
+
+
+      <div class="cta">
+
+
+        <a
+          class="btn primary"
+          href="files/Real-time%20Attendance%20System.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+
+          View Live Presentation ↗
+
+        </a>
+
+
+
+        <a
+          class="btn"
+          href="files/Real-time%20Attendance%20System.pdf"
+          download
+        >
+
+          Download Presentation
+
+        </a>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==============================
+     ACADEMIC PROJECTS
+============================== -->
+
+<section id="projects">
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <h2>
+        Academic Projects
+      </h2>
+
+    </div>
+
+
+
+    <div class="grid-2">
+
+
+
+      <!-- MOVIE REVIEW -->
+
+      <article class="card project-card">
+
+
+        <img
+          class="project-image"
+          src="photo/movie.png"
+          alt="Movie Review Web System"
+        >
+
+
+
+        <div class="project-top">
+
+
+          <h3>
+            Movie Review Web
+          </h3>
+
+
+
+          <a
+            class="link"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/pgm789/moviereviewsystem.git"
+          >
+
+            GitHub ↗
+
+          </a>
+
+
+        </div>
+
+
+
+        <p>
+
+          Web application with
+          user authentication
+          and CRUD functionality
+          for movie reviews.
+
+        </p>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">
+            HTML
+          </span>
+
+          <span class="tag">
+            JavaScript
+          </span>
+
+          <span class="tag">
+            PHP
+          </span>
+
+          <span class="tag">
+            MySQL
+          </span>
+
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- UNITEFUND -->
+
+      <article class="card project-card">
+
+
+        <img
+          class="fund-image"
+          src="photo/fund.jpeg"
+          alt="UniteFund Mobile App"
+        >
+
+
+
+        <div class="project-top">
+
+
+          <h3>
+            UniteFund Mobile App
+          </h3>
+
+
+
+          <a
+            class="link"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/pgm789/G19-NickGurr.git"
+          >
+
+            GitHub ↗
+
+          </a>
+
+
+        </div>
+
+
+
+        <p>
+
+          Android crowdfunding
+          platform where users
+          can raise money for
+          personal and charitable causes.
+
+        </p>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">
+            Java
+          </span>
+
+          <span class="tag">
+            Android Studio
+          </span>
+
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- WEATHER -->
+
+      <article class="card project-card">
+
+
+        <img
+          class="project-image"
+          src="photo/weather.png"
+          alt="Real-Time Weather and Flood Risk Pipeline"
+        >
+
+
+
+        <div class="project-top">
+
+
+          <h3>
+
+            Real-Time Weather &
+            Flood Risk Pipeline
+
+          </h3>
+
+
+        </div>
+
+
+
+        <p>
+
+          Cloud-based AWS pipeline
+          for processing weather data
+          and flood-risk information.
+
+        </p>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">
+            AWS
+          </span>
+
+          <span class="tag">
+            Cloud
+          </span>
+
+          <span class="tag">
+            Data Pipeline
+          </span>
+
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- CARDIOVASCULAR -->
+
+      <article class="card project-card">
+
+
+        <img
+          class="project-image"
+          src="photo/cardio.png"
+          alt="Cardiovascular Risk Prediction"
+        >
+
+
+
+        <div class="project-top">
+
+          <h3>
+            Cardiovascular Risk Prediction
+          </h3>
+
+        </div>
+
+
+
+        <p>
+
+          Machine learning project
+          trained to predict individual
+          cardiovascular risk levels:
+          low, medium or high.
+
+        </p>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">
+            Python
+          </span>
+
+          <span class="tag">
+            Jupyter
+          </span>
+
+          <span class="tag">
+            Machine Learning
+          </span>
+
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- TRAFFIC SIGN -->
+
+      <article class="card project-card">
+
+
+        <img
+          class="project-image"
+          src="photo/traffic.png"
+          alt="Traffic Sign Detection System"
+        >
+
+
+
+        <div class="project-top">
+
+          <h3>
+            Traffic Sign Detection System
+          </h3>
+
+        </div>
+
+
+
+        <p>
+
+          Computer vision system
+          using image preprocessing,
+          color segmentation,
+          contour detection
+          and object recognition.
+
+        </p>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">
+            C++
+          </span>
+
+          <span class="tag">
+            OpenCV
+          </span>
+
+          <span class="tag">
+            Visual Studio
+          </span>
+
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- AR -->
+
+      <article class="card project-card">
+
+
+        <img
+          class="project-image"
+          src="photo/ar.jpeg"
+          alt="AR Interactive Object Viewer"
+        >
+
+
+
+        <div class="project-top">
+
+
+          <h3>
+            AR Interactive Object Viewer
+          </h3>
+
+
+
+          <a
+            class="link"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/pgm789/AR1.git"
+          >
+
+            GitHub ↗
+
+          </a>
+
+
+        </div>
+
+
+
+        <p>
+
+          Augmented reality viewer
+          that recognizes image markers,
+          displays 3D objects,
+          supports object rotation,
+          information display
+          and audio descriptions.
+
+        </p>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">
+            C#
+          </span>
+
+          <span class="tag">
+            Unity
+          </span>
+
+          <span class="tag">
+            AR Foundation
+          </span>
+
+
+        </div>
+
+
+      </article>
+
+
+
+      <!-- VR -->
+
+      <article class="card project-card">
+
+
+        <img
+          class="project-image"
+          src="photo/vr.jpeg"
+          alt="VR Treasure Hunt Game"
+        >
+
+
+
+        <div class="project-top">
+
+
+          <h3>
+            VR Treasure Hunt Game
+          </h3>
+
+
+
+          <a
+            class="link"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/DevilGemini/New-VR-Hunter.git"
+          >
+
+            GitHub ↗
+
+          </a>
+
+
+        </div>
+
+
+
+        <p>
+
+          Immersive VR treasure hunt
+          game with teleportation navigation
+          and interactive object collection.
+
+        </p>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">
+            C#
+          </span>
+
+          <span class="tag">
+            Unity
+          </span>
+
+          <span class="tag">
+            XR Interaction Toolkit
+          </span>
+
+
+        </div>
+
+
+      </article>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==============================
+     SKILLS
+============================== -->
+
+<section id="skills">
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <h2>
+        Technical Skills
+      </h2>
+
+    </div>
+
+
+
+    <div class="skills-wrap">
+
+
+      <div class="card skill-group">
+
+
+        <h3>
+          Programming & Web
+        </h3>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">
+            C++
+          </span>
+
+          <span class="tag">
+            Java
+          </span>
+
+          <span class="tag">
+            Python
+          </span>
+
+          <span class="tag">
+            R
+          </span>
+
+          <span class="tag">
+            SQL Plus
+          </span>
+
+          <span class="tag">
+            HTML
+          </span>
+
+          <span class="tag">
+            JavaScript
+          </span>
+
+          <span class="tag">
+            PHP
+          </span>
+
+          <span class="tag">
+            Linux
+          </span>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="card skill-group">
+
+
+        <h3>
+          Tools & Platforms
+        </h3>
+
+
+
+        <div class="tags">
+
+
+          <span class="tag">
+            VS Code
+          </span>
+
+          <span class="tag">
+            Visual Studio 2022
+          </span>
+
+          <span class="tag">
+            Jupyter
+          </span>
+
+          <span class="tag">
+            Colab
+          </span>
+
+          <span class="tag">
+            PyCharm
+          </span>
+
+          <span class="tag">
+            Eclipse
+          </span>
+
+          <span class="tag">
+            Streamlit
+          </span>
+
+          <span class="tag">
+            XAMPP
+          </span>
+
+          <span class="tag">
+            AWS
+          </span>
+
+          <span class="tag">
+            VirtualBox
+          </span>
+
+          <span class="tag">
+            VMware
+          </span>
+
+          <span class="tag">
+            Cisco Packet Tracer
+          </span>
+
+          <span class="tag">
+            GNS3
+          </span>
+
+          <span class="tag">
+            Postman
+          </span>
+
+          <span class="tag">
+            Microsoft Office
+          </span>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==============================
+     EDUCATION
+============================== -->
+
+<section id="education">
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <h2>
+        Education & Activities
+      </h2>
+
+    </div>
+
+
+
+    <div class="grid-2">
+
+
+
+      <div class="card">
+
+
+        <h3>
+
+          Universiti Tunku Abdul Rahman
+          (UTAR)
+
+        </h3>
+
+
+        <p class="muted">
+
+          Kampar Campus
+
+        </p>
+
+
+
+        <p>
+
+
+          <strong>
+
+            Bachelor of Computer Science
+            (Honours)
+
+          </strong>
+
+
+          <br>
+
+
+          <span class="muted small">
+
+            Oct 2020 – June 2026
+
+          </span>
+
+
+        </p>
+
+
+
+        <h3 style="margin-top:24px">
+
+          Certifications
+
+        </h3>
+
+
+
+        <p class="muted">
+
+          AWS Academy Cloud Foundations
+
+          <br>
+
+          AI in Application Design
+          (ASEM)
+
+        </p>
+
+
+      </div>
+
+
+
+      <div class="card">
+
+
+        <h3>
+
+          Leadership & Volunteering
+
+        </h3>
+
+
+
+        <p class="muted">
+
+          · Chairperson,
+          UTAR Chinese Buddhist Talk
+
+          <br>
+
+          · Publicity Manager,
+          Meditation Camp
+
+          <br>
+
+          · Technical Manager,
+          UTAR Welcoming Night
+
+          <br>
+
+          · Logistics Assistant
+          and Program Assistant,
+          Annual Buddhist Camp
+
+          <br>
+
+          · Volunteer,
+          UTAR Hospital
+          (28 hours)
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ==============================
+     CONTACT
+============================== -->
+
+<section id="contact">
+
+  <div class="container">
+
+
+    <div class="contact-box">
+
+
+
+      <div>
+
+
+        <div class="eyebrow">
+
+          Available to Start Working Immediately
+
+        </div>
+
+
+
+        <h2
+          style="
+            font-size:1.8rem;
+            margin:0 0 14px;
+          "
+        >
+
+          Currently Seeking Entry-Level Opportunities.
+
+        </h2>
+
+
+
+        <p class="muted">
+
+          I am currently seeking
+          entry-level opportunities
+          where I can apply my technical skills,
+          gain practical experience,
+          and continue growing
+          in the technology field.
+
+        </p>
+
+
+      </div>
+
+
+
+      <div class="card">
+
+
+        <p>
+
+
+          <strong>
+            Email
+          </strong>
+
+
+          <br>
+
+
+          <a
+            class="link"
+            href="mailto:guikming789@gmail.com"
+          >
+
+            guikming789@gmail.com
+
+          </a>
+
+
+        </p>
+
+
+
+        <p>
+
+
+          <strong>
+
+            Phone / WhatsApp
+
+          </strong>
+
+
+          <br>
+
+
+          <a
+            class="link"
+            href="https://wa.me/60164131547"
+            target="_blank"
+            rel="noreferrer"
+          >
+
+            016-4131547
+
+          </a>
+
+
+        </p>
+
+
+
+        <p>
+
+
+          <strong>
+
+            GitHub
+
+          </strong>
+
+
+          <br>
+
+
+          <a
+            class="link"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/pgm789"
+          >
+
+            github.com/pgm789 ↗
+
+          </a>
+
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<footer>
+
+  <div class="container">
+
+    © 2026 Phoong Guik Ming.
+    Built with HTML & CSS.
+
+  </div>
+
+</footer>
+
+
+
+<!-- ==============================
+     MOBILE MENU JAVASCRIPT
+============================== -->
+
+<script>
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+      const menuToggle =
+        document.getElementById(
+          "menuToggle"
+        );
+
+      const mobileMenu =
+        document.getElementById(
+          "mobileMenu"
+        );
+
+
+      menuToggle.addEventListener(
+        "click",
+        function (event) {
+
+          event.stopPropagation();
+
+          mobileMenu.classList.toggle(
+            "active"
+          );
+
+
+          const isOpen =
+            mobileMenu.classList.contains(
+              "active"
+            );
+
+
+          menuToggle.innerHTML =
+            isOpen
+              ? "✕"
+              : "☰";
+
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+              ? "true"
+              : "false"
+          );
+
+        }
+      );
+
+
+
+      document
+        .querySelectorAll(
+          ".mobile-menu a"
+        )
+        .forEach(
+          function (link) {
+
+            link.addEventListener(
+              "click",
+              function () {
+
+                mobileMenu
+                  .classList
+                  .remove(
+                    "active"
+                  );
+
+
+                menuToggle.innerHTML =
+                  "☰";
+
+
+                menuToggle.setAttribute(
+                  "aria-expanded",
+                  "false"
+                );
+
+              }
+            );
+
+          }
+        );
+
+
+
+      document.addEventListener(
+        "click",
+        function (event) {
+
+          if (
+            !mobileMenu.contains(
+              event.target
+            ) &&
+            !menuToggle.contains(
+              event.target
+            )
+          ) {
+
+            mobileMenu
+              .classList
+              .remove(
+                "active"
+              );
+
+
+            menuToggle.innerHTML =
+              "☰";
+
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+
+        }
+      );
+
+
+
+      window.addEventListener(
+        "resize",
+        function () {
+
+          if (
+            window.innerWidth > 1000
+          ) {
+
+            mobileMenu
+              .classList
+              .remove(
+                "active"
+              );
+
+
+            menuToggle.innerHTML =
+              "☰";
+
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+</script>
+
+
+</body>
+
+</html>
