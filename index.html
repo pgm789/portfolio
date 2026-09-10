@@ -221,6 +221,25 @@
       margin-bottom: 24px;
     }
 
+    .contact-mini {
+      display: block;
+      transition: .2s ease;
+    }
+
+    .contact-mini span {
+      color: var(--text);
+    }
+
+    .contact-mini:hover {
+      border-color: var(--accent);
+      background: rgba(94,234,212,.08);
+      transform: translateY(-2px);
+    }
+
+    .contact-mini:hover strong {
+      color: var(--accent);
+    }
+
     .mini-grid {
       display: grid;
       gap: 12px;
@@ -271,11 +290,18 @@
       gap: 20px;
     }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+
+    .about-intro {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
     }
+
+    .about-card {
+      margin-bottom: 24px;
+    }
+
 
     .card {
       border: 1px solid var(--border);
@@ -478,21 +504,10 @@
 
     .skill-group h3 {
       margin-top: 0;
+      margin-bottom: 16px;
     }
 
-    .contact-box {
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 28px;
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 32px;
-      background: linear-gradient(
-        135deg,
-        rgba(94,234,212,.09),
-        rgba(96,165,250,.08)
-      );
-    }
+
 
     footer {
       padding: 30px 0 50px;
@@ -504,12 +519,10 @@
     @media (max-width: 850px) {
 
       .hero,
-      .contact-box,
       .skills-wrap {
         grid-template-columns: 1fr;
       }
 
-      .grid-3,
       .grid-2 {
         grid-template-columns: 1fr;
       }
@@ -598,10 +611,8 @@
       <a href="#about">About</a>
       <a href="#internship">Internship</a>
       <a href="#fyp">Final Year Project</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
+      <a href="#projects">Academic Projects</a>
       <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
     </div>
 
     <!-- Mobile Button -->
@@ -618,10 +629,8 @@
       <a href="#about">About</a>
       <a href="#internship">Internship</a>
       <a href="#fyp">Final Year Project</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
+      <a href="#projects">Academic Projects</a>
       <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
     </div>
 
   </div>
@@ -647,7 +656,7 @@
     </h1>
 
     <p>
-      I am a recent Computer Science graduate with hands-on experience in backend development, IoT, data analytics, and cloud computing. I have experience building web applications, REST APIs, and automated data pipelines using Python, Flask, and AWS. I am passionate about applying my backend and data analytics skills to build, test, and optimize scalable and practical technology solutions.
+      I am a recent Computer Science graduate and currently seeking entry-level opportunities where I can apply my technical skills, gain practical experience, and continue growing in the technology field.
     </p>
 
     <div class="cta">
@@ -664,19 +673,6 @@
         Download Resume ↓
       </a>
 
-      <a class="btn" href="mailto:guikming789@gmail.com">
-        Email Me
-      </a>
-
-      <a
-        class="btn"
-        href="https://github.com/pgm789"
-        target="_blank"
-        rel="noreferrer"
-      >
-        GitHub ↗
-      </a>
-
     </div>
   </div>
 
@@ -687,33 +683,54 @@
       GM
     </div>
 
-    <h3 style="font-size:1.5rem;margin:0">
-      Computer Science <br> Fresh Graduate
-    </h3>
-
-    <p class="muted">
-      Backend · IoT · Data Analytics ·
-      Cloud · Computer Vision
-    </p>
-
     <div class="mini-grid">
 
-      <div class="mini-item">
-        <strong>Email</strong>
+    <!-- EMAIL -->
+    <a
+      class="mini-item contact-mini"
+      href="mailto:guikming789@gmail.com"
+    >
+      <strong>Email</strong>
+      <span>
         guikming789@gmail.com
-      </div>
+      </span>
+    </a>
 
-      <div class="mini-item">
-        <strong>Phone / WhatsApp</strong>
+
+    <!-- WHATSAPP -->
+    <a
+      class="mini-item contact-mini"
+      href="https://wa.me/60164131547"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <strong>Phone / WhatsApp</strong>
+      <span>
         016-4131547
-      </div>
+      </span>
+    </a>
 
-      <div class="mini-item">
-        <strong>Languages</strong>
-        English · Malay · Mandarin · Hokkien
-      </div>
 
+    <!-- GITHUB -->
+    <a
+      class="mini-item contact-mini"
+      href="https://github.com/pgm789"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <strong>GitHub</strong>
+      <span>
+        github.com/pgm789 ↗
+      </span>
+    </a>
+
+    <!-- LANGUAGES -->
+    <div class="mini-item">
+      <strong>Languages</strong>
+      <span>English · Malay · Mandarin · Hokkien</span>
     </div>
+
+  </div>
 
   </aside>
 
@@ -731,38 +748,73 @@
     </div>
 
 
-    <div class="grid-3">
+    <div class="card about-card">
 
-      <div class="card">
-        <h3>Backend Development</h3>
+      <p class="about-intro">
+        I am a recent Computer Science graduate with hands-on experience
+        in backend development, IoT, data analytics, and cloud computing.
+        I have experience building web applications, REST APIs, and automated
+        data pipelines using Python, Flask, and AWS. I am passionate about
+        applying my backend and data analytics skills to build, test, and
+        optimize scalable and practical technology solutions.
+      </p>
 
-        <p class="muted">
-          Building web applications,
-          REST APIs, data flows and database-backed
-          systems with Python, Flask, PHP and SQL.
-        </p>
+    </div>
+
+
+    <div class="skills-wrap">
+
+      <!-- PROGRAMMING & WEB -->
+      <div class="card skill-group">
+
+        <h3>
+          Programming & Web
+        </h3>
+
+        <div class="tags">
+
+          <span class="tag">C++</span>
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+          <span class="tag">R</span>
+          <span class="tag">SQL Plus</span>
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">PHP</span>
+          <span class="tag">Linux</span>
+
+        </div>
+
       </div>
 
 
-      <div class="card">
-        <h3>IoT & Computer Vision</h3>
+      <!-- TOOLS & PLATFORMS -->
+      <div class="card skill-group">
 
-        <p class="muted">
-          Hands-on work with Raspberry Pi,
-          sensors, OpenCV and Dlib for automation,
-          monitoring, recognition and real-time data capture.
-        </p>
-      </div>
+        <h3>
+          Tools & Platforms
+        </h3>
 
+        <div class="tags">
 
-      <div class="card">
-        <h3>Cloud & Analytics</h3>
+          <span class="tag">VS Code</span>
+          <span class="tag">Visual Studio 2022</span>
+          <span class="tag">Jupyter</span>
+          <span class="tag">Colab</span>
+          <span class="tag">PyCharm</span>
+          <span class="tag">Eclipse</span>
+          <span class="tag">Streamlit</span>
+          <span class="tag">XAMPP</span>
+          <span class="tag">AWS</span>
+          <span class="tag">VirtualBox</span>
+          <span class="tag">VMware</span>
+          <span class="tag">Cisco Packet Tracer</span>
+          <span class="tag">GNS3</span>
+          <span class="tag">Postman</span>
+          <span class="tag">Microsoft Office</span>
 
-        <p class="muted">
-          Experience with AWS pipelines,
-          forecasting models, data scraping,
-          automation and predictive analytics.
-        </p>
+        </div>
+
       </div>
 
     </div>
@@ -1464,81 +1516,6 @@
 </section>
 
 
-<!-- SKILLS -->
-
-<section id="skills">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <h2>
-        Technical Skills
-      </h2>
-
-    </div>
-
-
-    <div class="skills-wrap">
-
-      <div class="card skill-group">
-
-        <h3>
-          Programming & Web
-        </h3>
-
-        <div class="tags">
-
-          <span class="tag">C++</span>
-          <span class="tag">Java</span>
-          <span class="tag">Python</span>
-          <span class="tag">R</span>
-          <span class="tag">SQL Plus</span>
-          <span class="tag">HTML</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">PHP</span>
-          <span class="tag">Linux</span>
-
-        </div>
-
-      </div>
-
-
-      <div class="card skill-group">
-
-        <h3>
-          Tools & Platforms
-        </h3>
-
-        <div class="tags">
-
-          <span class="tag">VS Code</span>
-          <span class="tag">Visual Studio 2022</span>
-          <span class="tag">Jupyter</span>
-          <span class="tag">Colab</span>
-          <span class="tag">PyCharm</span>
-          <span class="tag">Eclipse</span>
-          <span class="tag">Streamlit</span>
-          <span class="tag">XAMPP</span>
-          <span class="tag">AWS</span>
-          <span class="tag">VirtualBox</span>
-          <span class="tag">VMware</span>
-          <span class="tag">Cisco Packet Tracer</span>
-          <span class="tag">GNS3</span>
-          <span class="tag">Postman</span>
-          <span class="tag">Microsoft Office</span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
 <section id="education">
 
   <div class="container">
@@ -1656,91 +1633,6 @@
 
 </section>
 
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-  <div class="container">
-
-    <div class="contact-box">
-
-      <div>
-
-        <div class="eyebrow">
-          Available to Start Working Immediately
-        </div>
-
-        <h2
-          style="
-            font-size:1.8rem;
-            margin:0 0 14px;
-          "
-        >
-          Currently Seeking Entry-Level Opportunities.
-        </h2>
-
-        <p class="muted">
-          I am currently seeking entry-level opportunities
-          where I can apply my technical skills,
-          gain practical experience, and continue growing
-          in the technology field.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <p>
-          <strong>Email</strong>
-          <br>
-
-          <a
-            class="link"
-            href="mailto:guikming789@gmail.com"
-          >
-            guikming789@gmail.com
-          </a>
-        </p>
-
-
-        <p>
-          <strong>Phone / WhatsApp</strong>
-          <br>
-
-          <a
-            class="link"
-            href="https://wa.me/60164131547"
-            target="_blank"
-            rel="noreferrer"
-          >
-            016-4131547
-          </a>
-        </p>
-
-
-        <p>
-          <strong>GitHub</strong>
-          <br>
-
-          <a
-            class="link"
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/pgm789"
-          >
-            github.com/pgm789 ↗
-          </a>
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
 </main>
 
