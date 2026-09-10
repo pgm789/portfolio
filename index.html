@@ -512,6 +512,34 @@
         position: relative;
       }
 
+      .cert-actions {
+        display: inline-flex;
+        gap: 6px;
+        margin-left: 18px;
+        vertical-align: middle;
+      }
+
+      .cert-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 25px;
+        height: 25px;
+
+        border: 1px solid var(--border);
+        border-radius: 6px;
+
+        font-size: .72rem;
+        transition: .2s ease;
+      }
+
+      .cert-icon:hover {
+        background: rgba(94,234,212,.12);
+        border-color: var(--accent);
+        transform: translateY(-1px);
+      }
+      
       /* Mobile dropdown */
       .mobile-menu {
         position: absolute;
@@ -1414,10 +1442,39 @@
         </h3>
 
         <p class="muted">
+
           AWS Academy Cloud Foundations
+
+          <span class="cert-actions">
+            <a
+              class="cert-icon"
+              href="file/aws.pdf"
+              target="_blank"
+              title="View Certificate"
+            >
+              👁
+            </a>
+
+          </span>
+
           <br>
+
           AI in Application Design (ASEM)
+
+          <span class="cert-actions">
+            <a
+              class="cert-icon"
+              href="file/asem.pdf"
+              target="_blank"
+              title="View Certificate"
+            >
+              👁
+            </a>
+          </span>
+
         </p>
+
+        </div>
 
       </div>
 
