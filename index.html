@@ -512,33 +512,7 @@
         position: relative;
       }
 
-      .cert-actions {
-        display: inline-flex;
-        gap: 6px;
-        margin-left: 18px;
-        vertical-align: middle;
-      }
 
-      .cert-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 25px;
-        height: 25px;
-
-        border: 1px solid var(--border);
-        border-radius: 6px;
-
-        font-size: .72rem;
-        transition: .2s ease;
-      }
-
-      .cert-icon:hover {
-        background: rgba(94,234,212,.12);
-        border-color: var(--accent);
-        transform: translateY(-1px);
-      }
       
       /* Mobile dropdown */
       .mobile-menu {
@@ -1394,24 +1368,17 @@
 </section>
 
 
-<!-- EDUCATION -->
-
 <section id="education">
 
   <div class="container">
 
     <div class="section-head">
-
-      <h2>
-        Education & Activities
-      </h2>
-
+      <h2>Education & Activities</h2>
     </div>
-
 
     <div class="grid-2">
 
-
+      <!-- EDUCATION -->
       <div class="card">
 
         <h3>
@@ -1423,7 +1390,6 @@
         </p>
 
         <p>
-
           <strong>
             Bachelor of Computer Science (Honours)
           </strong>
@@ -1433,7 +1399,6 @@
           <span class="muted small">
             Oct 2020 – June 2026
           </span>
-
         </p>
 
 
@@ -1441,15 +1406,19 @@
           Certifications
         </h3>
 
-        <p class="muted">
+        <div class="cert-row">
 
-          AWS Academy Cloud Foundations
+          <span class="muted">
+            AWS Academy Cloud Foundations
+          </span>
 
           <span class="cert-actions">
+
             <a
               class="cert-icon"
               href="file/aws.pdf"
               target="_blank"
+              rel="noreferrer"
               title="View Certificate"
             >
               👁
@@ -1457,28 +1426,35 @@
 
           </span>
 
-          <br>
+        </div>
 
-          AI in Application Design (ASEM)
+
+        <div class="cert-row">
+
+          <span class="muted">
+            AI in Application Design (ASEM)
+          </span>
 
           <span class="cert-actions">
+
             <a
               class="cert-icon"
               href="file/asem.pdf"
               target="_blank"
+              rel="noreferrer"
               title="View Certificate"
             >
               👁
             </a>
-          </span>
 
-        </p>
+          </span>
 
         </div>
 
       </div>
 
 
+      <!-- LEADERSHIP -->
       <div class="card">
 
         <h3>
@@ -1486,11 +1462,19 @@
         </h3>
 
         <p class="muted">
-          · Chairperson, UTAR Chinese Buddhist Talk <br>
-          · Publicity Manager, Meditation Camp<br>
-          · Technical Manager, UTAR Welcoming Night<br>
-          · Logistics Assistant and Program Assistant,Annual Buddhist Camp<br>
-          · Volunteer, UTAR Hospital (28 hours).
+          · Chairperson, UTAR Chinese Buddhist Talk
+          <br>
+
+          · Publicity Manager, Meditation Camp
+          <br>
+
+          · Technical Manager, UTAR Welcoming Night
+          <br>
+
+          · Logistics Assistant and Program Assistant, Annual Buddhist Camp
+          <br>
+
+          · Volunteer, UTAR Hospital (28 hours)
         </p>
 
       </div>
